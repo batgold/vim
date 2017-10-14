@@ -1,0 +1,19 @@
+use :find to open other files
+use :ls to show files in the buffer
+use :b to open files in the buffer
+
+try the above with wildcard (*) and tab completion
+
+use CTRL-] to jump to tag under the cursor
+use g-CTRL-] for ambiguous tags, opens list of dependencies
+use CTRL-t to jump back up the tag stack
+
+use CTRL-n to autocomplete
+use CTRL-x CTRL-f to autocomplete dir/file
+
+use :edit . to open file manager
+	there are other options regarding netrw, but not sure yet. youtube it.
+
+do snipping mapping!
+
+highlight 80th column
