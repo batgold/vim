@@ -17,3 +17,12 @@ use :edit . to open file manager
 do snipping mapping!
 
 highlight 80th column
+
+za to close fold - lines with same indentation
+zo to open
+zj and zk to scroll up/down folds
+fold colors set in .vim/colors/**.vim
+
+use #!/usr/bin/env python header for python scripts to run with ./**.py 
+
+change case with ~

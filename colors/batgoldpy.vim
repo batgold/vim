@@ -37,6 +37,9 @@ hi Define		ctermbg=NONE	ctermfg=BLUE		cterm=BOLD
 " ERROR
 hi Error		ctermbg=RED		ctermfg=WHITE		cterm=BOLD
 
+" FOLDING
+hi Folded		ctermbg=BLACK	ctermfg=YELLOW
 "hi Underlined	   ctermfg=cyan		cterm=underline
 "hi Visual		term=reverse		ctermfg=black	ctermbg=darkCyan		
 
+hi StatusLine	ctermbg=BLUE

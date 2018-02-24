@@ -6,4 +6,4 @@ setlocal smarttab
 setlocal expandtab
 
 "colorscheme blue
-colorschem batgoldpy
+colorscheme batgoldpy
