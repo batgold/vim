@@ -42,4 +42,7 @@ hi Folded		ctermbg=BLACK	ctermfg=YELLOW
 "hi Underlined	   ctermfg=cyan		cterm=underline
 "hi Visual		term=reverse		ctermfg=black	ctermbg=darkCyan		
 
+" AUTOCOMPLETE
+hi Pmenu		ctermbg=MAGENTA	ctermfg=BLACK
+hi PmenuSel		ctermbg=CYAN	ctermfg=BLACK		cterm=ITALIC
 hi StatusLine	ctermbg=BLUE

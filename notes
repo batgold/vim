@@ -26,3 +26,14 @@ fold colors set in .vim/colors/**.vim
 use #!/usr/bin/env python header for python scripts to run with ./**.py 
 
 change case with ~
+find word with f
+next file with :n
+show files in buffer with :args
+
+
+filetype references in /usr/share/vim/vim74/filetype.vim
+definitinos for nomenclature/syntax in /usr/share/vim/vim74/syntax/... (python.vim)
+other plugin info in ftplugin (tabpstop etc)
+
+
+
