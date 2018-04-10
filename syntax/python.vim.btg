@@ -72,7 +72,7 @@ set cpo&vim
 "   built-in below (use 'from __future__ import print_function' in 2)
 " - async and await were added in Python 3.5 and are soft keywords.
 "
-syn keyword pythonBoolean	False, None, True
+syn keyword pythonStatement	False, None, True
 syn keyword pythonStatement	as assert break continue del exec global
 syn keyword pythonStatement	lambda nonlocal pass print return with yield
 syn keyword pythonStatement	class def nextgroup=pythonFunction skipwhite
@@ -178,7 +178,7 @@ endif
 if !exists("python_no_builtin_highlight")
   " built-in constants
   " 'False', 'True', and 'None' are also reserved words in Python 3
-  syn keyword pythonBoolean	False True None
+  syn keyword pythonBuiltin	False True None
   syn keyword pythonBuiltin	NotImplemented Ellipsis __debug__
   " built-in functions
   syn keyword pythonBuiltin	abs all any bin bool bytearray callable chr
@@ -301,7 +301,6 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonQuotes		String
   HiLink pythonTripleQuotes	pythonQuotes
   HiLink pythonEscape		Special
-  HiLink pythonBoolean		Boolean
   if !exists("python_no_number_highlight")
     HiLink pythonNumber		Number
   endif
