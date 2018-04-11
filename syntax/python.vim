@@ -172,7 +172,7 @@ syn match pythonMathOperator '\V=\|-\|+\|*\|@\|/\|%\|&\||\|^\|~\|<\|>\|!='
 " BTG 4/18
 " Highlight highlight class functions self.foo()
 " syn match pythonSelfFunc "\v%(self\.)@5<=\w+%(\()\@="
-syn match pythonSelfFunc "\v%(self\.)@5<=\w+(\()\@="
+syn match pythonSelfFunc "\v%(self\.)@5<=\w+(\()@="
 "syn match pythonSelfFunc "\v%(self\.)@5<=\w+"
 
 " Group the built-ins in the order in the 'Python Library Reference' for
