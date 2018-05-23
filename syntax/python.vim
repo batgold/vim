@@ -165,15 +165,6 @@ if !exists("python_no_number_highlight")
   syn match   pythonNumber	"\%(^\|\W\)\zs\d*\.\d\+\%([eE][+-]\=\d\+\)\=[jJ]\=\>"
 endif
 
-" BTG 4/18
-" Highlight Arithmatic Operators, +=-*/
-syn match pythonMathOperator '\V=\|-\|+\|*\|@\|/\|%\|&\||\|^\|~\|<\|>\|!='
-
-" BTG 4/18
-" Highlight highlight class functions self.foo()
-" syn match pythonSelfFunc "\v%(self\.)@5<=\w+%(\()\@="
-syn match pythonSelfFunc "\v%(self\.)@5<=\w+(\()@="
-"syn match pythonSelfFunc "\v%(self\.)@5<=\w+"
 
 " Group the built-ins in the order in the 'Python Library Reference' for
 " easier comparison.
@@ -298,13 +289,10 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonConditional	Conditional
   HiLink pythonRepeat		Repeat
   HiLink pythonLogOperator	LogOperator
-  HiLink pythonMathOperator	MathOperator
   HiLink pythonException	Exception
   HiLink pythonInclude		Include
   HiLink pythonAsync		Statement
   HiLink pythonBoolean		Boolean
-  HiLink pythonSelf		Self
-  HiLink pythonSelfFunc		Function
   HiLink pythonDecorator	Define
   HiLink pythonFunction		Function
   HiLink pythonComment		Comment
@@ -333,6 +321,37 @@ if version >= 508 || !exists("did_python_syn_inits")
 
   delcommand HiLink
 endif
+
+" BTG CUSTOM EDITS
+" Highlight Arithmatic Operators, +=-*/
+
+syn match pythonMathOperator '\V=\|-\|+\|*\|@\|/\|%\|&\||\|^\|~\|<\|>\|!='
+syn keyword pythonImports	nmp plt sig
+
+" Highligh any custom function
+"syn match pythonCustFunc "\v[[:alpha:]_.]+\ze(\s?\()"
+syn match pythonCustFunc "\v%(\ )@2<=\w+(\()@="
+syn match pythonCustFunc "\v%(\.)@2<=\w+(\()@="
+syn match pythonCustFunc "\v%()@1<=\w+(\()@="
+" Highlight highlight class functions self.foo()
+" syn match pythonSelfFunc "\v%(self\.)@5<=\w+%(\()\@="
+syn match pythonSelfProp "\v%(self\.)@5<=\w+"
+syn match pythonSelfFunc "\v%(self\.)@5<=\w+(\()@="
+"syn match pythonSelfFunc "\v%(self\.)@5<=\w+(\.)@="
+"syn match pythonSelfFunc "\v%(self\.)@5<=\w+"
+
+" Highlgiht nmp, plt, and sig functions (common pkgs i use)
+"syn match pythonNumpyFunc "\v%(nmp\.)@4<=\w+(\()@="
+"syn match pythonPlotFunc "\v%(plt\.)@4<=\w+(\()@="
+"syn match pythonSigFunc "\v%(sig\.)@4<=\w+(\()@="
+
+hi link pythonMathOperator	MathOperator
+hi link pythonImports		Imports
+hi link pythonCustFunc		CallFunc
+hi link pythonSelf		Self
+hi link pythonSelfProp		SelfProp
+hi link pythonSelfFunc		CallFunc
+" END BTG CUSTOM EDITS
 
 let b:current_syntax = "python"
 
