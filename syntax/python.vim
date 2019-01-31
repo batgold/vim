@@ -85,7 +85,7 @@ syn keyword pythonAsync		async await
 syn keyword pythonSelf		self
 
 " Decorators (new in Python 2.4)
-syn match   pythonDecorator	"@" display nextgroup=pythonFunction skipwhite
+"syn match   pythonDecorator	"@" display nextgroup=pythonFunction skipwhite
 " The zero-length non-grouping match before the function name is
 " extremely important in pythonFunction.  Without it, everything is
 " interpreted as a function inside the contained environment of
@@ -293,7 +293,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonInclude		Include
   HiLink pythonAsync		Statement
   HiLink pythonBoolean		Boolean
-  HiLink pythonDecorator	Define
+  HiLink pythonDecorator	Decorator
   HiLink pythonFunction		Function
   HiLink pythonComment		Comment
   HiLink pythonTodo		Todo
@@ -324,8 +324,8 @@ endif
 
 " BTG CUSTOM EDITS
 " Highlight Arithmatic Operators, +=-*/
-
-syn match pythonMathOperator '\V=\|-\|+\|*\|@\|/\|%\|&\||\|^\|~\|<\|>\|!='
+"syn match pythonMathOperator '\V=\|-\|+\|*\|@\|/\|%\|&\||\|^\|~\|<\|>\|!='
+syn match pythonMathOperator '\V=\|-\|+\|*\|/\|%\|&\||\|^\|~\|<\|>\|!='
 syn keyword pythonImports	nmp plt sig
 
 " Highligh any custom function
@@ -340,6 +340,9 @@ syn match pythonSelfFunc "\v%(self\.)@5<=\w+(\()@="
 "syn match pythonSelfFunc "\v%(self\.)@5<=\w+(\.)@="
 "syn match pythonSelfFunc "\v%(self\.)@5<=\w+"
 
+" Highligh all of the decorator tag
+syn match pythonDecorator "@"
+syn match pythonDecorator "\v%(\@)@1<=\w+"
 " Highlgiht nmp, plt, and sig functions (common pkgs i use)
 "syn match pythonNumpyFunc "\v%(nmp\.)@4<=\w+(\()@="
 "syn match pythonPlotFunc "\v%(plt\.)@4<=\w+(\()@="
@@ -351,6 +354,7 @@ hi link pythonCustFunc		CallFunc
 hi link pythonSelf		Self
 hi link pythonSelfProp		SelfProp
 hi link pythonSelfFunc		CallFunc
+hi link pythonDecorator		Decorator
 " END BTG CUSTOM EDITS
 
 let b:current_syntax = "python"

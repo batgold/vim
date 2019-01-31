@@ -13,6 +13,7 @@ hi Statement	ctermbg=NONE	ctermfg=14	cterm=ITALIC
 hi Conditional	ctermbg=NONE	ctermfg=13	cterm=NONE
 hi Repeat	ctermbg=NONE	ctermfg=13	cterm=NONE
 hi Boolean	ctermbg=NONE	ctermfg=11
+hi Decorator	ctermbg=NONE	ctermfg=3
 hi MathOperator	ctermbg=NONE	ctermfg=11
 hi LogOperator	ctermbg=NONE	ctermfg=11
 hi Exception	ctermbg=NONE	ctermfg=13	cterm=NONE
